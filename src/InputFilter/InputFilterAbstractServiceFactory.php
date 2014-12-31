@@ -71,7 +71,7 @@ class InputFilterAbstractServiceFactory implements AbstractFactoryInterface
             return $this->factory;
         }
 
-        $this->factory = new Factory();
+        $this->factory = new Factory($services);
         $this->factory
             ->getDefaultFilterChain()
             ->setPluginManager($this->getFilterPluginManager($services));
